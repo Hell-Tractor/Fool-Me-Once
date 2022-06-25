@@ -343,6 +343,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].skillId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].coolTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].prefabName
+      value: HunXiWanJia
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].durationTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].selectorType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].impactType.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].impactType.Array.data[0]
+      value: Parry
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].attackTargetTags.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[1].attackTargetTags.Array.data[0]
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 742796336222345840, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: m_Name
       value: Player1
