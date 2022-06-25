@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Linq;
 using System.Threading.Tasks;
 using System;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector]
     public bool isParrying = false;
+    [HideInInspector]
+    public bool isInvincible = false;
+    private List<List<int>> _skillList = new List<List<int>>();
 
     float xVelocity;
 
@@ -134,11 +138,20 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Kill(GameObject killer) {
+        if (_skillList[PlayerNum].Contains(10)) {
+            Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
+            Skill.SkillData data = manager.PrepareSkill(10);
+            if (data != null) {
+                manager.GenerateSkill(data);
+            }
+        }
+        if (isInvincible)
+            return;
         if (isParrying && killer != null) {
             isParrying = false;
             killer.GetComponent<PlayerController>().Kill(this.gameObject);
         } else {
-            Debug.Log("KILL!!!");
+            Destroy(this.gameObject);
         }
     }
 }
