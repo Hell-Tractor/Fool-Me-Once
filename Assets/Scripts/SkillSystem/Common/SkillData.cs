@@ -10,6 +10,7 @@ namespace Skill {
         public float coolTime;
         [HideInInspector]
         public float coolRemain;
+        public int value;
         public float attackDistance;
         public float attackRange;
         public string[] attackTargetTags;

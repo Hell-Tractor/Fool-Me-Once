@@ -1,7 +1,9 @@
+using System;
 namespace Skill {
     public enum SelectorType {
         Collider,
         Global,
-        All
+        All,
+        Random
     }
 }

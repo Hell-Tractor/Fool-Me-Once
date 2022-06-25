@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
+
+        _skillList.Add(new List<int>());
+        _skillList.Add(new List<int>());
     }
 
     void Update()
@@ -133,6 +136,7 @@ public class PlayerController : MonoBehaviour
             if (data != null) {
                 manager.GenerateSkill(data);
             }
+            return;
         }
         if (isInvincible)
             return;
