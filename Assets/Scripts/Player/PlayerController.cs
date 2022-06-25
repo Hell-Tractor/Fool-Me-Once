@@ -16,7 +16,10 @@ public class PlayerController : MonoBehaviour
 
     public float delay = 1.0f;
 
+    public bool CanJump = true;
+
     private Rigidbody2D rb;
+
     private Collider2D coll;
 
     [HideInInspector]
@@ -28,10 +31,11 @@ public class PlayerController : MonoBehaviour
     float xVelocity;
 
     int jumpCount;
+
     private bool isOnGround;
 
-    bool jumpPress;
-
+    private bool jumpPress;
+   
     int normal;
     void Start()
     {
@@ -44,7 +48,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum))
+        if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum)&& CanJump)
         {
             Collider2D platformCollider = this._getColliderBelow();
             PlatformEffector2D platformEffector = platformCollider?.GetComponent<PlatformEffector2D>();
@@ -61,14 +65,25 @@ public class PlayerController : MonoBehaviour
                 task.Invoke();
             }
         }
-        else if (Input.GetButtonDown("JumpPlayer" + PlayerNum) && jumpCount > 0)
+        else if (Input.GetButtonDown("JumpPlayer" + PlayerNum) && jumpCount > 0&& CanJump)
         {
             jumpPress = true;
         }
         if (Input.GetKeyDown(KeyCode.U) && PlayerNum == 1) {
+         //   Debug.Log("æ»æ»Œ“");
             Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
-            Skill.SkillData data = manager.PrepareSkill(7);
+            Skill.SkillData data = manager.PrepareSkill(8);
             if (data != null) {
+                manager.GenerateSkill(data);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.I) && PlayerNum == 1)
+        {
+            //   Debug.Log("æ»æ»Œ“");
+            Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
+            Skill.SkillData data = manager.PrepareSkill(16);
+            if (data != null)
+            {
                 manager.GenerateSkill(data);
             }
         }
@@ -107,7 +122,7 @@ public class PlayerController : MonoBehaviour
     {
         xVelocity = Input.GetAxisRaw("HorizontalPlayer" + PlayerNum);
 
-        rb.velocity = new Vector2(xVelocity * speed, rb.velocity.y);
+        rb.velocity = new Vector2(xVelocity* speed, rb.velocity.y);
 
         if (xVelocity != 0)
         {
@@ -147,4 +162,5 @@ public class PlayerController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
 }
