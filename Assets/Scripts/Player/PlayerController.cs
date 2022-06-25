@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 6f;
 
     public float delay = 1.0f;
-
     private Rigidbody2D rb;
     private Collider2D coll;
 
@@ -23,7 +22,8 @@ public class PlayerController : MonoBehaviour
     public bool isParrying = false;
     [HideInInspector]
     public bool isInvincible = false;
-    private List<List<int>> _skillList = new List<List<int>>();
+    // [HideInInspector]
+    public int Direction = 1;
 
     float xVelocity;
 
@@ -37,13 +37,14 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
-
-        _skillList.Add(new List<int>());
-        _skillList.Add(new List<int>());
     }
 
     void Update()
     {
+        float horizontal = Input.GetAxis("HorizontalPlayer" + PlayerNum);
+        if (!Mathf.Approximately(horizontal, 0f)) {
+            Direction = Math.Sign(horizontal);
+        }
         if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum))
         {
             Collider2D platformCollider = this._getColliderBelow();
@@ -65,14 +66,17 @@ public class PlayerController : MonoBehaviour
         {
             jumpPress = true;
         }
-        if (Input.GetKeyDown(KeyCode.U) && PlayerNum == 1) {
-            Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
-            Skill.SkillData data = manager.PrepareSkill(7);
-            if (data != null) {
-                manager.GenerateSkill(data);
+        for (int keyId = 0; keyId < 4; ++keyId) {
+            if (Input.GetButtonDown("Player" + PlayerNum + "Skill" + keyId)) {
+                Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
+                if (manager.skills[keyId].isPassive)
+                    continue;
+                Skill.SkillData data = manager.PrepareSkill(manager.skills[keyId].skillId);
+                if (data != null) {
+                    manager.GenerateSkill(data);
+                }
             }
         }
-
     }
 
     void FixedUpdate()
@@ -90,7 +94,7 @@ public class PlayerController : MonoBehaviour
         {
             layerMask = LayerMask.GetMask("Platform")
         };
-        collider.Cast(Vector2.down, filter, results, 0.2f, true);
+        collider.Cast(Vector2.down * Mathf.Sign(jumpForce), filter, results, 0.2f, true);
         if (results.Length == 0)
             return null;
         return results.First().collider;
@@ -105,14 +109,9 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        xVelocity = Input.GetAxisRaw("HorizontalPlayer" + PlayerNum);
+        xVelocity = Input.GetAxis("HorizontalPlayer" + PlayerNum);
 
         rb.velocity = new Vector2(xVelocity * speed, rb.velocity.y);
-
-        if (xVelocity != 0)
-        {
-            transform.localScale = new Vector3(xVelocity, 1, 1);
-        }
     }
 
     void Jump()
@@ -130,13 +129,13 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Kill(GameObject killer) {
-        if (_skillList[PlayerNum].Contains(10)) {
-            Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
+        Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
+        if (manager.skills.Any(skill => skill.skillId == 10)) {
             Skill.SkillData data = manager.PrepareSkill(10);
             if (data != null) {
                 manager.GenerateSkill(data);
+                return;
             }
-            return;
         }
         if (isInvincible)
             return;

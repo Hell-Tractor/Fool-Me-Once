@@ -189,6 +189,265 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &288242178
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 288242180}
+  - component: {fileID: 288242179}
+  - component: {fileID: 288242181}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &288242179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288242178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14634dab27c01df46acd89a9c43d0a5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillPool:
+  - skillId: 1
+    name: "\u963F\u4F1F\u597D\u900A"
+    description: 
+    isPassive: 0
+    coolTime: 1
+    coolRemain: 0
+    value: 0
+    attackDistance: 5
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - Damage
+    nextBatterId: 0
+    durationTime: 0
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: normalAttack
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 0
+  - skillId: 4
+    name: "\u6362\u4F4D\u601D\u8003"
+    description: 
+    isPassive: 0
+    coolTime: 5
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - Swap
+    nextBatterId: 0
+    durationTime: 0
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: HuanWeiSiKao
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 1
+  - skillId: 7
+    name: "\u9B42\u7CFB\u73A9\u5BB6"
+    description: 
+    isPassive: 0
+    coolTime: 5
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - Parry
+    nextBatterId: 0
+    durationTime: 0
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: HunXiWanJia
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 1
+  - skillId: 9
+    name: "\u5929\u6C14\u4E4B\u5B50"
+    description: 
+    isPassive: 0
+    coolTime: 20
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags: []
+    attackTargets: []
+    impactType: []
+    nextBatterId: 0
+    durationTime: 10
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: TianQiZhiZi
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 1
+  - skillId: 13
+    name: "\u4F60\u7684\u540D\u5B57"
+    description: 
+    isPassive: 0
+    coolTime: 10
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - Repeat
+    nextBatterId: 0
+    durationTime: 0
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: NiDeMingZi
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 1
+  - skillId: 14
+    name: "\u5348\u9910\u65F6\u95F4"
+    description: 
+    isPassive: 0
+    coolTime: 10000
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - Damage
+    nextBatterId: 0
+    durationTime: 3
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: WuCanShiJian
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 3
+  - skillId: 17
+    name: "\u4E09\u65E5\u8FDE\u73E0"
+    description: 
+    isPassive: 0
+    coolTime: 15
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - GravityReverse
+    nextBatterId: 0
+    durationTime: 5
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: SanRiLianZhu
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 2
+  - skillId: 10
+    name: "\u575A\u6BC5\u4E0D\u5012"
+    description: 
+    isPassive: 1
+    coolTime: 10000
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags: []
+    attackTargets: []
+    impactType:
+    - Revive
+    nextBatterId: 0
+    durationTime: 3
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: JianYiBuDao
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 2
+--- !u!4 &288242180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288242178}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 414, y: 221.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &288242181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288242178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bfbe6f7ed02a7d44851174cc323069c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Players:
+  - {fileID: 114428599939411308}
+  - {fileID: 1507206793}
+  player1Skills:
+  - "\u963F\u4F1F\u597D\u900A"
+  - "\u6362\u4F4D\u601D\u8003"
+  - "\u4E09\u65E5\u8FDE\u73E0"
+  - "\u5929\u6C14\u4E4B\u5B50"
+  player2Skills:
+  - "\u963F\u4F1F\u597D\u900A"
+  - "\u5348\u9910\u65F6\u95F4"
+  - "\u575A\u6BC5\u4E0D\u5012"
+  - "\u4F60\u7684\u540D\u5B57"
 --- !u!1001 &706565405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -500,6 +759,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 925cb074234b47448b0a4c68fa5c2392, type: 3}
+--- !u!114 &1507206793 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1072757244322860415, guid: 925cb074234b47448b0a4c68fa5c2392, type: 3}
+  m_PrefabInstance: {fileID: 1507206792}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe68ec86a781974fb5f12cb7ba00307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &114428599939411307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -507,86 +777,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].skillId
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].skillId
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].coolTime
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].coolTime
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].prefabName
-      value: SanRiLianZhu
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].prefabName
-      value: HunXiWanJia
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].atkInterval
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].durationTime
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].selectorType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].durationTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].selectorType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].impactType.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].impactType.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].impactType.Array.data[0]
-      value: Damage
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].impactType.Array.data[0]
-      value: Parry
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].attackTargetTags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].attackTargetTags.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[0].attackTargetTags.Array.data[0]
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: skills.Array.data[1].attackTargetTags.Array.data[0]
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 742796336222345840, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: m_Name
       value: Player1
@@ -635,17 +825,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 742796336222345852, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: m_Color.b
-      value: 0.8773585
-      objectReference: {fileID: 0}
-    - target: {fileID: 742796336222345852, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4059499
-      objectReference: {fileID: 0}
-    - target: {fileID: 742796336222345852, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
-      propertyPath: m_Color.r
-      value: 0.17105724
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+--- !u!114 &114428599939411308 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+  m_PrefabInstance: {fileID: 114428599939411307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe68ec86a781974fb5f12cb7ba00307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

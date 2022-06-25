@@ -1,12 +1,15 @@
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 using System;
 using UnityEngine;
 
 namespace Skill {
     [Serializable]
-    public class SkillData {
+    public class SkillData : ICloneable {
         public int skillId;
         public string name;
         public string description;
+        public bool isPassive = false;
         public float coolTime;
         [HideInInspector]
         public float coolRemain;
@@ -31,5 +34,9 @@ namespace Skill {
         [HideInInspector]
         public GameObject hitFxPrefab;
         public SelectorType selectorType;
+
+        public object Clone() {
+            return this.MemberwiseClone();
+        }
     }
 }

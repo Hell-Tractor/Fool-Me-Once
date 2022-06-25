@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.17105724, g: 0.4059499, b: 0.8773585, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -152,6 +152,9 @@ MonoBehaviour:
   PlayerNum: 1
   jumpForce: 6
   delay: 1
+  isParrying: 0
+  isInvincible: 0
+  Direction: 1
 --- !u!114 &114428599939411309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,26 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe68ec86a781974fb5f12cb7ba00307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skills:
-  - skillId: 4
-    name: 
-    description: 
-    coolTime: 4
-    coolRemain: 0
-    attackDistance: 0
-    attackRange: 0
-    attackTargetTags:
-    - Player
-    attackTargets: []
-    impactType:
-    - Swap
-    nextBatterId: 0
-    durationTime: 0
-    atkInterval: 0
-    owner: {fileID: 0}
-    prefabName: HuanWeiSiKao
-    skillPrefab: {fileID: 0}
-    animationName: 
-    hitFxName: 
-    hitFxPrefab: {fileID: 0}
-    selectorType: 1
+  skills: []

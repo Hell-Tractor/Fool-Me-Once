@@ -9,12 +9,12 @@ namespace Skill {
         public override void DeploySkill() {
             Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
             GameObject owner = this.SkillData.owner;
-            CharacterStatus status = owner.GetComponent<CharacterStatus>();
+            PlayerController controller = owner.GetComponent<PlayerController>();
 
             // 在玩家前方生成
-            rb.MovePosition(owner.transform.position + (new Vector3((owner.transform.localScale.x + transform.localScale.x )* status.Direction * 0.6f, 0, 0)));
+            transform.position = owner.transform.position + (new Vector3((owner.transform.localScale.x + transform.localScale.x) * controller.Direction * 0.6f, 0, 0));
             // 设置移动速度
-            rb.velocity = (new Vector3(status.Direction, 0, 0)) * Speed;
+            rb.velocity = (new Vector3(controller.Direction, 0, 0)) * Speed;
             // 记录初始位置
             _startPosition = this.transform.position;
 
