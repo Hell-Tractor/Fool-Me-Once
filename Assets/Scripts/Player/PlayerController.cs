@@ -15,7 +15,11 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 6f;
 
     public float delay = 1.0f;
+
+    public bool CanJump = true;
+
     private Rigidbody2D rb;
+
     private Collider2D coll;
 
     [HideInInspector]
@@ -28,10 +32,11 @@ public class PlayerController : MonoBehaviour
     float xVelocity;
 
     int jumpCount;
+
     private bool isOnGround;
 
-    bool jumpPress;
-
+    private bool jumpPress;
+   
     int normal;
     void Start()
     {
@@ -45,7 +50,7 @@ public class PlayerController : MonoBehaviour
         if (!Mathf.Approximately(horizontal, 0f)) {
             Direction = Math.Sign(horizontal);
         }
-        if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum))
+        if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum)&& CanJump)
         {
             Collider2D platformCollider = this._getColliderBelow();
             PlatformEffector2D platformEffector = platformCollider?.GetComponent<PlatformEffector2D>();
@@ -62,7 +67,7 @@ public class PlayerController : MonoBehaviour
                 task.Invoke();
             }
         }
-        else if (Input.GetButtonDown("JumpPlayer" + PlayerNum) && jumpCount > 0)
+        else if (Input.GetButtonDown("JumpPlayer" + PlayerNum) && jumpCount > 0&& CanJump)
         {
             jumpPress = true;
         }
@@ -146,4 +151,5 @@ public class PlayerController : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
 }
