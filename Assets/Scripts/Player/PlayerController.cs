@@ -5,19 +5,19 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("ÒÆ¶¯²ÎÊý")]
+    [Header("ï¿½Æ¶ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public float speed = 8f;
 
-    [Header("»·¾³¼ì²â")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public LayerMask groundLayer;
 
-    [Header("½ÇÉ«±êºÅ")]
+    [Header("ï¿½ï¿½É«ï¿½ï¿½ï¿½")]
     public int PlayerNum;
 
-    [Header("ÌøÔ¾²ÎÊý")]
+    [Header("ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½")]
     public float jumpForce = 6f;
 
-    [Header("Æ½Ì¨ÑÓ³ÙÊ±¼ä")]
+    [Header("Æ½Ì¨ï¿½Ó³ï¿½Ê±ï¿½ï¿½")]
     public float delay = 1.0f;
 
     private Rigidbody2D rb;
@@ -25,19 +25,19 @@ public class PlayerController : MonoBehaviour
 
     float xVelocity;
 
-    int jumpCount;//ÌøÔ¾´ÎÊý
+    int jumpCount;//ï¿½ï¿½Ô¾ï¿½ï¿½ï¿½ï¿½
 
-    [Header("ÊÇ·ñÔÚµØÃæÉÏ")]
+    [Header("ï¿½Ç·ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½")]
     private bool isOnGround;
 
-    //°´¼üÉèÖÃ
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     bool jumpPress;
 
     int normal;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();//»ñÈ¡¸ÕÌå×é¼þ
-        coll = GetComponent<Collider2D>();//»ñÈ¡Åö×²Ìå×é¼þ
+        rb = GetComponent<Rigidbody2D>();//ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        coll = GetComponent<Collider2D>();//ï¿½ï¿½È¡ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     void Update()
@@ -63,6 +63,13 @@ public class PlayerController : MonoBehaviour
         {
             jumpPress = true;
         }
+        // if (Input.GetKeyDown(KeyCode.U) && PlayerNum == 1) {
+        //     Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
+        //     Skill.SkillData data = manager.PrepareSkill(4);
+        //     if (data != null) {
+        //         manager.GenerateSkill(data);
+        //     }
+        // }
 
     }
 
@@ -89,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     void isOnGroundCheck()
     {
-        ////ÅÐ¶Ï½ÇÉ«Åö×²Æ÷ÓëµØÃæÍ¼²ã·¢Éú½Ó´¥
+        ////ï¿½Ð¶Ï½ï¿½É«ï¿½ï¿½×²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ã·¢ï¿½ï¿½ï¿½Ó´ï¿½
         if (coll.IsTouchingLayers(groundLayer))
         {
             isOnGround = true;
@@ -107,7 +114,7 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2(xVelocity * speed, rb.velocity.y);
 
-        //¾µÃæ·­×ª
+        //ï¿½ï¿½ï¿½æ·­×ª
         if (xVelocity != 0)
         {
             transform.localScale = new Vector3(xVelocity, 1, 1);
@@ -116,19 +123,19 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        //ÔÚµØÃæÉÏ
+        //ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
         if (isOnGround)
         {
             jumpCount = 1;
         }
-        //ÔÚµØÃæÉÏÌøÔ¾
+        //ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾
         if (jumpPress && isOnGround)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount--;
             jumpPress = false;
         }
-        //ÔÚ¿ÕÖÐÌøÔ¾
+        //ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾
         else if (jumpPress && jumpCount > 0 && !isOnGround)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
