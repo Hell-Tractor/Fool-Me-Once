@@ -58,13 +58,13 @@ public class PlayerController : MonoBehaviour
         {
             jumpPress = true;
         }
-        // if (Input.GetKeyDown(KeyCode.U) && PlayerNum == 1) {
-        //     Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
-        //     Skill.SkillData data = manager.PrepareSkill(7);
-        //     if (data != null) {
-        //         manager.GenerateSkill(data);
-        //     }
-        // }
+        if (Input.GetKeyDown(KeyCode.U) && PlayerNum == 1) {
+            Skill.CharacterSkillManager manager = GetComponent<Skill.CharacterSkillManager>();
+            Skill.SkillData data = manager.PrepareSkill(7);
+            if (data != null) {
+                manager.GenerateSkill(data);
+            }
+        }
 
     }
 
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public void Kill(GameObject killer) {
-        if (isParrying) {
+        if (isParrying && killer != null) {
             isParrying = false;
             killer.GetComponent<PlayerController>().Kill(this.gameObject);
         } else {
