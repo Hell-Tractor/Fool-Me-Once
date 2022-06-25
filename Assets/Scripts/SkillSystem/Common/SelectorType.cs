@@ -1,6 +1,7 @@
 namespace Skill {
     public enum SelectorType {
         Collider,
-        Global
+        Global,
+        All
     }
 }

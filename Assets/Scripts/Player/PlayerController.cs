@@ -95,14 +95,9 @@ public class PlayerController : MonoBehaviour
 
     void isOnGroundCheck()
     {
-        if (coll.IsTouchingLayers(groundLayer))
-        {
-            isOnGround = true;
-        }
-        else
-        {
-            isOnGround = false;
-        }
+        isOnGround = coll.Cast(Vector2.down * (Mathf.Sign(jumpForce)), new ContactFilter2D() {
+            layerMask = groundLayer
+        }, new RaycastHit2D[1], 0.05f, true) > 0 && this.rb.velocity.y * jumpForce < 0;
     }
 
     void Move()
@@ -121,15 +116,9 @@ public class PlayerController : MonoBehaviour
     {
         if (isOnGround)
         {
-            jumpCount = 1;
+            jumpCount = 2;
         }
-        if (jumpPress && isOnGround)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            jumpCount--;
-            jumpPress = false;
-        }
-        else if (jumpPress && jumpCount > 0 && !isOnGround)
+        if (jumpPress && jumpCount > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount--;
