@@ -7,6 +7,7 @@ namespace Skill {
     /// 技能管理器
     /// </summary>
     public class CharacterSkillManager : MonoBehaviour {
+        public int? LastSkillId = null;
         // 技能列表
         public SkillData[] skills;
 

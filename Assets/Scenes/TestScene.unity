@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[0].prefabName
-      value: TianQiZhiZi
+      value: NiDeMingZi
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[1].prefabName
@@ -369,7 +369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[0].durationTime
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[1].durationTime
@@ -381,11 +381,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[0].impactType.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[1].impactType.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
+      propertyPath: skills.Array.data[0].impactType.Array.data[0]
+      value: Repeat
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[1].impactType.Array.data[0]
@@ -393,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[0].attackTargetTags.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[1].attackTargetTags.Array.size
@@ -401,7 +405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[0].attackTargetTags.Array.data[0]
-      value: 
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 114428599939411309, guid: 05d6fb2dc5b92244c83d6c18e6a641f7, type: 3}
       propertyPath: skills.Array.data[1].attackTargetTags.Array.data[0]
