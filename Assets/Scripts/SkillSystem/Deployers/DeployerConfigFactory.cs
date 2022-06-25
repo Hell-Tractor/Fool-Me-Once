@@ -10,7 +10,7 @@ namespace Skill {
         public static List<IImpactEffect> CreateImpactEffect(SkillData data) {
             List<IImpactEffect> result = new List<IImpactEffect>();
             foreach (string impact in data.impactType) {
-                result.Add(_createObject<IImpactEffect>("Skill." + impact + "ImpactEffect"));
+                result.Add(_createObject<IImpactEffect>("Skill." + impact + "Impact"));
             }
             return result;
         }

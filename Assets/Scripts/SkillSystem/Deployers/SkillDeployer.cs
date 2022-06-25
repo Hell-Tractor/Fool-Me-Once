@@ -47,5 +47,9 @@ namespace Skill {
         /// 释放技能
         /// </summary>
         public abstract void DeploySkill();
+
+        public void Destroy() {
+            Destroy(this.gameObject);
+        }
     }
 }
