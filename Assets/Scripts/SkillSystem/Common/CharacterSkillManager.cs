@@ -9,7 +9,7 @@ namespace Skill {
     public class CharacterSkillManager : MonoBehaviour {
         public int? LastSkillId = null;
         // 技能列表
-        // [HideInInspector]
+        [HideInInspector]
         public SkillData[] skills;
         public Animator Animator = null;
 

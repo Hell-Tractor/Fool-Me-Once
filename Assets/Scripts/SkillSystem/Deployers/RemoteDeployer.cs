@@ -15,6 +15,8 @@ namespace Skill {
             transform.position = owner.transform.position + (new Vector3((owner.transform.localScale.x + transform.localScale.x) * controller.Direction * 0.6f, 0, 0));
             // 设置移动速度
             rb.velocity = (new Vector3(controller.Direction, 0, 0)) * Speed;
+            this.GetComponent<Animator>()?.SetFloat("Direction", rb.velocity.x);
+            
             // 记录初始位置
             _startPosition = this.transform.position;
 

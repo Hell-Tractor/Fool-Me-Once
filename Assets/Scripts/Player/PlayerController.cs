@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
 
         // update animator
         Animator?.SetFloat("Direction", _direction);
+        this.GetComponent<Skill.CharacterSkillManager>()?.Animator?.SetFloat("Direction", _direction);
         Animator?.SetFloat("Speed X", Mathf.Abs(rb.velocity.x));
         
         if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum)&& CanJump)
