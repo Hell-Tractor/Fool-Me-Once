@@ -369,7 +369,7 @@ MonoBehaviour:
     - Damage
     nextBatterId: 0
     durationTime: 3
-    atkInterval: 0
+    atkInterval: 0.05
     owner: {fileID: 0}
     prefabName: WuCanShiJian
     skillPrefab: {fileID: 0}
@@ -1821,7 +1821,7 @@ MonoBehaviour:
   - "\u8BF7\u4E00\u53F7\u73A9\u5BB6\u9009\u62E9\u4E09\u4E2A\u6280\u80FD"
   - "\u8BF7\u4E8C\u53F7\u73A9\u5BB6\u9009\u62E9\u4E09\u4E2A\u6280\u80FD"
   MaskGameObject: {fileID: 1530760042}
-  MaskHideDuration: 2
+  MaskHideDuration: 1.5
   ConfirmButton: {fileID: 1826047782}
 --- !u!1 &1940095386
 GameObject:

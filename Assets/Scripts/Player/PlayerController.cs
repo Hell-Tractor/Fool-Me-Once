@@ -23,8 +23,7 @@ public class PlayerController : MonoBehaviour
     public bool lockDirection = false;
     public Animator Animator = null;
 
-    public GameObject gameEndPrefab1;
-    public GameObject gameEndPrefab2;
+    public GameObject WinDialog;
 
     private Rigidbody2D rb;
 
@@ -179,22 +178,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnKilled(GameObject killer)
     {
-        if(PlayerNum==2)
-        {
-        //    Debug.Log("1");
-            Destroy(this.gameObject);
-           // Instantiate(gameEndPrefab1);
-            //gameEndPrefab1.SetActive(true);
-            SceneManager.LoadScene("EndScene1");
-        }
-        else if (PlayerNum == 1)
-        {
-          //  Debug.Log("2");
-            Destroy(this.gameObject);
-          //  Instantiate(gameEndPrefab2);
-            gameEndPrefab2.SetActive(true);
-            SceneManager.LoadScene("EndScene2");
-        }
+        Destroy(this.gameObject);
+        // 暂停游戏
+        Time.timeScale = 0;
+        WinDialog.SetActive(true);
     }
 
 }
