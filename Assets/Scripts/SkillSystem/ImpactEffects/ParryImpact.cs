@@ -6,7 +6,6 @@ namespace Skill {
     public class ParryImpact : IImpactEffect {
         public void Execute(SkillDeployer deployer) {
 
-
             PlayerController controller = deployer.SkillData.owner.GetComponent<PlayerController>();
             controller.isParrying = true;
 
