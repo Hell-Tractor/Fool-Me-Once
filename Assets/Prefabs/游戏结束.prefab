@@ -405,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9793a5f17b3e3b74e812b2daa9b0ddce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ConfirmButtonClickSound: {fileID: 8300000, guid: 1b2df21ea66842a4e942bed61d39a5b1, type: 3}
 --- !u!1 &3419284227055398155
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,10 +8,12 @@ namespace Skill {
         public Sprite[] Sprites;
         public float ShowDelay;
         public Image Image;
+        public AudioClip SFX;
         private int _index = 0;
 
         public override void DeploySkill() {
             _calculateTargets();
+            AudioManager.Instance.PlaySFX(SFX);
             _showAnimation(() => this._impactTargets());
         }
 

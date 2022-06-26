@@ -15,6 +15,7 @@ public class SkillSelectUIManager : MonoBehaviour {
     public GameObject MaskGameObject;
     public float MaskHideDuration;
     public Button ConfirmButton;
+    public AudioClip ConfirmButtonClickSound;
     private int[] _IdInPool;
     private int _selectedCount = 0;
     private int _currentPlayerId = 1;
@@ -71,6 +72,7 @@ public class SkillSelectUIManager : MonoBehaviour {
     }
 
     public void SubmitSkill() {
+        AudioManager.Instance.PlaySFX(ConfirmButtonClickSound);
         int p = 1;
         for (int i = 0; i < Toggles.Length; ++i) {
             SkillToggleManager manager = Toggles[i].GetComponent<SkillToggleManager>();

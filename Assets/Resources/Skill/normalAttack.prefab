@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 30
+  NormalAttackSound: {fileID: 8300000, guid: 50b6cae574eb49444a39db7c78021979, type: 3}
 --- !u!70 &4906157130563546262
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

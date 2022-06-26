@@ -24,6 +24,8 @@ public class PlayerController : MonoBehaviour
     public Animator Animator = null;
 
     public GameObject WinDialog;
+    public AudioClip GameOverSound;
+    public AudioClip JumpSound;
 
     private Rigidbody2D rb;
 
@@ -151,6 +153,7 @@ public class PlayerController : MonoBehaviour
         }
         if (jumpPress && jumpCount > 0)
         {
+            AudioManager.Instance.PlaySFX(JumpSound);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount--;
             jumpPress = false;
@@ -178,6 +181,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnKilled(GameObject killer)
     {
+        if (GameManager.Instance.State != GameManager.GameState.RUNNING)
+            return;
+        GameManager.Instance.State = GameManager.GameState.GAMEOVER;
+        AudioManager.Instance.PlaySFX(GameOverSound);
         Destroy(this.gameObject);
         // 暂停游戏
         Time.timeScale = 0;

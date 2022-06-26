@@ -128,6 +128,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3f5f4546ac36a8744b032a1f483bc853, type: 3}
   ShowDelay: 3
   Image: {fileID: 6079630899305373621}
+  SFX: {fileID: 8300000, guid: a4a29f0ff9c15874bae79befc7a7f821, type: 3}
 --- !u!1 &6079630899305373623
 GameObject:
   m_ObjectHideFlags: 0

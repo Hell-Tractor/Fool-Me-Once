@@ -4,9 +4,12 @@ using UnityEngine;
 namespace Skill {
     public class RemoteDeployer : SkillDeployer {
         public float Speed = 3.0f;
+        public AudioClip NormalAttackSound;
         private Vector3 _startPosition;
         
         public override void DeploySkill() {
+            AudioManager.Instance.PlaySFX(NormalAttackSound);
+            
             Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
             GameObject owner = this.SkillData.owner;
             PlayerController controller = owner.GetComponent<PlayerController>();

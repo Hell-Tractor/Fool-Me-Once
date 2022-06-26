@@ -20,6 +20,7 @@ public class SkillSelectManager : MonoBehaviour {
                 FindPlayers();
                 SkillSelectManager.Instance._copySkills(1);
                 SkillSelectManager.Instance._copySkills(2);
+                GameManager.Instance.State = GameManager.GameState.RUNNING;
             }
         };
     }

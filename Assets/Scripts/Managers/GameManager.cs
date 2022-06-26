@@ -6,6 +6,13 @@ public class GameManager : MonoBehaviour {
 
     public Skill.SkillData[] SkillPool;
 
+    public enum GameState {
+        RUNNING,
+        GAMEOVER
+    }
+
+    public GameState State;
+
     private void Awake() {
         if (_instance != null) {
             Debug.LogWarning("GameManager already exists");
