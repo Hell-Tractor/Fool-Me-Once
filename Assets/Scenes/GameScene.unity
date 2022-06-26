@@ -4269,6 +4269,7 @@ MonoBehaviour:
   delay: 1
   CanJump: 1
   lockDirection: 0
+  Animator: {fileID: 1123649227}
   isParrying: 0
   isInvincible: 0
   Direction: -1
@@ -4286,6 +4287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills: []
+  Animator: {fileID: 0}
 --- !u!95 &1123649227
 Animator:
   serializedVersion: 3
@@ -6682,6 +6684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills: []
+  Animator: {fileID: 0}
 --- !u!114 &2146372352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6703,6 +6706,7 @@ MonoBehaviour:
   delay: 1
   CanJump: 1
   lockDirection: 0
+  Animator: {fileID: 2146372353}
   isParrying: 0
   isInvincible: 0
   Direction: -1

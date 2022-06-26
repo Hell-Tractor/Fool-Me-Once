@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool CanJump = true;
 
     public bool lockDirection = false;
+    public Animator Animator = null;
 
     private Rigidbody2D rb;
 
@@ -30,7 +31,15 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool isInvincible = false;
     [HideInInspector]
-    public int Direction = 1;
+    private float _direction = 1;
+    public int Direction {
+        get {
+            return _direction > 0 ? 1 : -1;
+        }
+        set {
+            _direction = value;
+        }
+    }
 
     float xVelocity;
 
@@ -52,8 +61,13 @@ public class PlayerController : MonoBehaviour
     {
         float horizontal = Input.GetAxis("HorizontalPlayer" + PlayerNum);
         if (!Mathf.Approximately(horizontal, 0f)&&lockDirection==false) {
-            Direction = Math.Sign(horizontal);
+            _direction = horizontal;
         }
+
+        // update animator
+        Animator?.SetFloat("Direction", _direction);
+        Animator?.SetFloat("Speed X", Mathf.Abs(rb.velocity.x));
+        
         if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum)&& CanJump)
         {
             Collider2D platformCollider = this._getColliderBelow();
