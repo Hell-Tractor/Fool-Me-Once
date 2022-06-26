@@ -12,6 +12,7 @@ namespace Skill {
                 await Task.Delay(Mathf.RoundToInt(deployer.SkillData.durationTime * 1000));
                 controller.isInvincible = false;
                 controller.Kill(null);
+                deployer.Destroy();
             };
             task.Invoke();
         }

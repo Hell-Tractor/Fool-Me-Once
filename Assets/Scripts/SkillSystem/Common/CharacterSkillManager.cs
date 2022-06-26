@@ -11,8 +11,10 @@ namespace Skill {
         // 技能列表
         // [HideInInspector]
         public SkillData[] skills;
+        private Animator _animator;
 
         private void Start() {
+            _animator = this.GetComponent<Animator>();
             foreach (SkillData skill in skills) {
                 this._initSkill(skill);
             }
@@ -20,6 +22,10 @@ namespace Skill {
 
         private void _initSkill(SkillData data) {
             data.skillPrefab = Resources.Load<GameObject>("Skill/" + data.prefabName);
+            if (data.skillPrefab == null) {
+                Debug.LogError("Skill prefab not found: " + data.prefabName);
+                return;
+            }
             data.owner = this.gameObject;
         }
 
@@ -45,12 +51,19 @@ namespace Skill {
         /// </summary>
         /// <param name="data">技能数据</param>
         public void GenerateSkill(SkillData data) {
+            if (data == null) {
+                Debug.LogError("Cannot generate null skill");
+                return;
+            }
             // 创建技能
             GameObject skillGO = Instantiate(data.skillPrefab, this.transform.position, this.transform.rotation);            
 
             // 传递技能数据
             SkillDeployer deployer = skillGO.GetComponent<SkillDeployer>();
             deployer.SkillData = data;
+            
+            // 播放技能动画
+            _animator?.SetTrigger(data.animationName);
 
             // 执行技能            
             deployer.DeploySkill();
