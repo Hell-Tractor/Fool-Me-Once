@@ -11,8 +11,10 @@ namespace Skill {
         // 技能列表
         // [HideInInspector]
         public SkillData[] skills;
+        private Animator _animator;
 
         private void Start() {
+            _animator = this.GetComponent<Animator>();
             foreach (SkillData skill in skills) {
                 this._initSkill(skill);
             }
@@ -59,6 +61,9 @@ namespace Skill {
             // 传递技能数据
             SkillDeployer deployer = skillGO.GetComponent<SkillDeployer>();
             deployer.SkillData = data;
+            
+            // 播放技能动画
+            _animator?.SetTrigger(data.animationName);
 
             // 执行技能            
             deployer.DeploySkill();
