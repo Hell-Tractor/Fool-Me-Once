@@ -24,7 +24,7 @@ namespace Skill {
 
         private IEnumerator _update() {
             while (_timer < SkillData.durationTime) {
-                int[] positionId = _getRandomArray(0, _maxCount - 1, Mathf.Min(GenerateCount, _maxCount));
+                int[] positionId = Utility.GetRandomArray(0, _maxCount - 1, Mathf.Min(GenerateCount, _maxCount));
                 foreach (int id in positionId) {
                     Vector3 position = new Vector3((id + 0.5f) * BulletPrefab.transform.localScale.x, Screen.height);
                     this._generateOneBullet(Camera.main.ScreenToWorldPoint(position));
@@ -40,18 +40,6 @@ namespace Skill {
             GameObject bullet = Instantiate(BulletPrefab, position, Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = InitBulletSpeed;
             bullet.transform.parent = this.transform;
-        }
-
-        private static int[] _getRandomArray(int min, int max, int total) {
-            List<int> buffer = new List<int>();
-            for (int i = min; i <= max; ++i)
-                buffer.Add(i);
-            int[] result = new int[total];
-            for (int i = 0; i < total; ++i) {
-                result[i] = buffer[Random.Range(0, buffer.Count)];
-                buffer.Remove(result[i]);
-            }
-            return result;
         }
     }
 }
