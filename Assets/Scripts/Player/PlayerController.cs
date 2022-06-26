@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class PlayerController : MonoBehaviour
 
     public bool lockDirection = false;
     public Animator Animator = null;
+
+    public GameObject gameEndPrefab1;
+    public GameObject gameEndPrefab2;
 
     private Rigidbody2D rb;
 
@@ -169,7 +173,27 @@ public class PlayerController : MonoBehaviour
             isParrying = false;
             killer.GetComponent<PlayerController>().Kill(this.gameObject);
         } else {
+            this.OnKilled(killer);
+        }
+    }
+
+    private void OnKilled(GameObject killer)
+    {
+        if(PlayerNum==2)
+        {
+        //    Debug.Log("1");
             Destroy(this.gameObject);
+           // Instantiate(gameEndPrefab1);
+            //gameEndPrefab1.SetActive(true);
+            SceneManager.LoadScene("EndScene1");
+        }
+        else if (PlayerNum == 1)
+        {
+          //  Debug.Log("2");
+            Destroy(this.gameObject);
+          //  Instantiate(gameEndPrefab2);
+            gameEndPrefab2.SetActive(true);
+            SceneManager.LoadScene("EndScene2");
         }
     }
 
