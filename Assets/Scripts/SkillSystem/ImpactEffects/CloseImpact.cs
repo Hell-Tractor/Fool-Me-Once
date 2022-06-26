@@ -17,11 +17,11 @@ namespace Skill
             player2.GetComponent<PlayerController>().lockDirection = false;
             Action task = async () =>
             {
-                for(int i = 0; i < 1000; i++)
+                for (float timer = 0; timer < deployer.SkillData.durationTime; timer += 0.05f)
                 {
-                    await Task.Delay(Mathf.RoundToInt(deployer.SkillData.durationTime * 1f));
-                    int player2direction = player2.GetComponent<PlayerController>().Direction;
+                    await Task.Delay(50);
                     int player1direction = player1.GetComponent<PlayerController>().Direction;
+                    int player2direction = player2.GetComponent<PlayerController>().Direction;
                     Vector2 vecDirection = new Vector2(-player2direction, 0);
                
                     player1.position = player2.position + vecDirection;

@@ -830,7 +830,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8d5cf3ffceeba1f4b9901b64570c4a24, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -1861,7 +1861,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8d5cf3ffceeba1f4b9901b64570c4a24, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -1918,7 +1918,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8d5cf3ffceeba1f4b9901b64570c4a24, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -2255,14 +2255,14 @@ MonoBehaviour:
   - {fileID: 2146372351}
   player1Skills:
   - "\u963F\u4F1F\u597D\u900A"
-  - "\u6362\u4F4D\u601D\u8003"
-  - "\u4E09\u65E5\u8FDE\u73E0"
   - "\u5929\u6C14\u4E4B\u5B50"
+  - "\u4F60\u6CA1\u4E8B\u5427"
+  - "\u5947\u5999\u65C5\u7A0B"
   player2Skills:
   - "\u963F\u4F1F\u597D\u900A"
-  - "\u5348\u9910\u65F6\u95F4"
-  - "\u575A\u6BC5\u4E0D\u5012"
-  - "\u4F60\u7684\u540D\u5B57"
+  - "\u770B\u4E0D\u89C1\u6211"
+  - "\u4F60\u6CA1\u4E8B\u5427"
+  - "\u5947\u5999\u65C5\u7A0B"
 --- !u!114 &592767847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,12 +2278,12 @@ MonoBehaviour:
   SkillPool:
   - skillId: 1
     name: "\u963F\u4F1F\u597D\u900A"
-    description: 
+    description: "\u522B\u770B\u4E86\uFF0C\u8FD9\u53EA\u662F\u666E\u901A\u653B\u51FB"
     isPassive: 0
     coolTime: 1
     coolRemain: 0
     value: 0
-    attackDistance: 5
+    attackDistance: 15
     attackRange: 0
     attackTargetTags:
     - Player
@@ -2296,15 +2296,15 @@ MonoBehaviour:
     owner: {fileID: 0}
     prefabName: normalAttack
     skillPrefab: {fileID: 0}
-    animationName: 
+    animationName: Attack
     hitFxName: 
     hitFxPrefab: {fileID: 0}
     selectorType: 0
   - skillId: 4
     name: "\u6362\u4F4D\u601D\u8003"
-    description: 
+    description: "\u4F7F\u7528\u540E\u4F60\u7ACB\u523B\u4E0E\u53E6\u4E00\u540D\u73A9\u5BB6\u4EA4\u6362\u4F4D\u7F6E\uFF0C\u51B7\u5374\u65F6\u95F412\u79D2"
     isPassive: 0
-    coolTime: 5
+    coolTime: 12
     coolRemain: 0
     value: 0
     attackDistance: 0
@@ -2326,9 +2326,9 @@ MonoBehaviour:
     selectorType: 1
   - skillId: 7
     name: "\u9B42\u7CFB\u73A9\u5BB6"
-    description: 
+    description: "\u5728\u8BE5\u6280\u80FD\u91CA\u653E\u671F\u95F4\u5185\u4F60\u53EF\u4EE5\u5F39\u53CD\u7531\u53E6\u4E00\u540D\u73A9\u5BB6\u76F4\u63A5\u5BF9\u4F60\u9020\u6210\u7684\u4F24\u5BB3\uFF0C\u5E76\u76F4\u63A5\u51FB\u8D25\u5BF9\u65B9\uFF0C\u8BE5\u6280\u80FD\u53EA\u80FD\u4F7F\u7528\u4E00\u6B21"
     isPassive: 0
-    coolTime: 5
+    coolTime: 100000
     coolRemain: 0
     value: 0
     attackDistance: 0
@@ -2344,13 +2344,13 @@ MonoBehaviour:
     owner: {fileID: 0}
     prefabName: HunXiWanJia
     skillPrefab: {fileID: 0}
-    animationName: Hint
+    animationName: Rebound
     hitFxName: 
     hitFxPrefab: {fileID: 0}
     selectorType: 1
   - skillId: 9
     name: "\u5929\u6C14\u4E4B\u5B50"
-    description: 
+    description: "\u4F7F\u7528\u8BE5\u6280\u80FD\u540E\u5929\u4E0A\u4F1A\u7ACB\u523B\u6389\u4E0B\u661F\u661F\uFF0C\u7531\u4E8E\u661F\u661F\u5F88\u80D6\uFF0C\u5176\u4F24\u5BB3\u5177\u6709\u6838\u5F39\u822C\u7684\u5A01\u529B\uFF0C\u522B\u88AB\u7838\u5230\u4E86\u3002\u8BE5\u6280\u80FD\u6301\u7EED\u65F6\u95F4\u5F88\u4E45\uFF0C\u53EA\u80FD\u4F7F\u7528\u4E00\u6B21\u3002"
     isPassive: 0
     coolTime: 20
     coolRemain: 0
@@ -2372,9 +2372,9 @@ MonoBehaviour:
     selectorType: 1
   - skillId: 13
     name: "\u4F60\u7684\u540D\u5B57"
-    description: 
+    description: "\u8BE5\u6280\u80FD\u53EF\u4EE5\u590D\u5236\u4F60\u7684\u5BF9\u624B\u6700\u8FD1\u4E00\u6B21\u4F7F\u7528\u7684\u6280\u80FD\uFF0C\u770B\u51C6\u65F6\u673A\u518D\u4F7F\u7528\u54E6"
     isPassive: 0
-    coolTime: 10
+    coolTime: 12
     coolRemain: 0
     value: 0
     attackDistance: 0
@@ -2396,7 +2396,7 @@ MonoBehaviour:
     selectorType: 1
   - skillId: 14
     name: "\u5348\u9910\u65F6\u95F4"
-    description: 
+    description: "\u4F7F\u7528\u540E\u7ACB\u5373\u63B7\u51FA\u9AB0\u5B50\uFF0C3\u79D2\u540E\u663E\u793A\u7ED3\u679C\uFF0C\u5947\u6570\u73A9\u5BB61\u51FA\u5C40\uFF0C\u5076\u6570\u73A9\u5BB62\u51FA\u5C40\uFF0C\u51FA\u5C40\u4E86\u5C31\u56DE\u5BB6\u5403\u5348\u9910\u5427\u3002\u8BE5\u6280\u80FD\u53EA\u80FD\u4F7F\u7528\u4E00\u6B21\u3002"
     isPassive: 0
     coolTime: 10000
     coolRemain: 0
@@ -2420,7 +2420,7 @@ MonoBehaviour:
     selectorType: 3
   - skillId: 17
     name: "\u4E09\u65E5\u8FDE\u73E0"
-    description: 
+    description: "\u54E6\u4E0D\uFF01\u4E09\u4E2A\u592A\u9633\u8FDE\u6210\u4E00\u6761\u7EBF\u4E86\uFF01\u91CD\u529B\u53CD\u8F6C\u4E86\uFF01\u6240\u4EE5\u8BB0\u5F97\u5148\u8C03\u6574\u597D\u4F4D\u7F6E\u518D\u8FDB\u884C\u53CD\u8F6C\u3002\u8BE5\u6280\u80FD\u51B7\u5374\u65F6\u95F415\u79D2"
     isPassive: 0
     coolTime: 15
     coolRemain: 0
@@ -2444,7 +2444,7 @@ MonoBehaviour:
     selectorType: 2
   - skillId: 10
     name: "\u575A\u6BC5\u4E0D\u5012"
-    description: 
+    description: "\u8BE5\u6280\u80FD\u53EA\u80FD\u4F7F\u7528\u4E00\u6B21\uFF0C\u5728\u4F60\u88AB\u653B\u51FB\u540E\u6FD2\u6B7B\u65F6\u4F7F\u7528\uFF0C\u4F60\u4F1A\u6682\u65F6\u88AB\u8FEB\u8D77\u6765\uFF0C\u6709\u4E09\u79D2\u65E0\u654C\u65F6\u95F4\uFF0C\u65F6\u95F4\u5230\u4E86\u5C31\u7EE7\u7EED\u7761\u5427\u3002\u522B\u60F3\u4E86\uFF0C\u8FD9\u4E2A\u6280\u80FD\u53EA\u80FD\u7528\u4E00\u6B21\uFF0C\u9664\u975E\u4F60\u5F88\u60F3\u518D\u8D77\u6765\u3002"
     isPassive: 1
     coolTime: 10000
     coolRemain: 0
@@ -2462,6 +2462,76 @@ MonoBehaviour:
     prefabName: JianYiBuDao
     skillPrefab: {fileID: 0}
     animationName: Hint
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 2
+  - skillId: 8
+    name: "\u770B\u4E0D\u89C1\u6211"
+    description: "\u770B\u4E0D\u89C1\u6211\u770B\u4E0D\u89C1\u6211\u770B\u4E0D\u89C1\u6211\u770B\u4E0D\u89C1\u6211\u770B\u4E0D\u89C1\u6211\u770B\u4E0D\u89C1\u6211...\u51B7\u5374\u65F6\u95F412\u79D2"
+    isPassive: 0
+    coolTime: 12
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags: []
+    attackTargets: []
+    impactType:
+    - Invisiable
+    nextBatterId: 0
+    durationTime: 3
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: KanBuJianWo
+    skillPrefab: {fileID: 0}
+    animationName: Tele
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 2
+  - skillId: 16
+    name: "\u4F60\u6CA1\u4E8B\u5427"
+    description: "\u4F60\u6CA1\u4E8B\u5427\uFF0C\u6211\u6765\u548C\u4F60\u80CC\u9760\u80CC\u8D34\u8D34\u3002\u6301\u7EED6\u79D2\u7684\u8D34\u8D34\u8BA9\u5BF9\u65B9\u611F\u53D7\u4F60\u7684\u6E29\u6696\uFF0C\u4F46\u662F\u4E0B\u4E00\u6B21\u4EB2\u5BC6\u63A5\u89E6\u5374\u8981\u7B49\u5F8515\u79D2\u3002"
+    isPassive: 0
+    coolTime: 15
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - Close
+    nextBatterId: 0
+    durationTime: 6
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: NiMeiShiBa
+    skillPrefab: {fileID: 0}
+    animationName: Vanish
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 1
+  - skillId: 5
+    name: "\u5947\u5999\u65C5\u7A0B"
+    description: "\u4E00\u70B9\u4E5F\u4E0D\u5947\u5999\uFF0C\u6362\u4E2A\u4F4D\u7F6E\u7F62\u4E86\uFF0C\u53EA\u662F\u4F60\u80FD\u7ECF\u5E38\u6362\u800C\u5DF2"
+    isPassive: 0
+    coolTime: 3
+    coolRemain: 0
+    value: 0
+    attackDistance: 5
+    attackRange: 0
+    attackTargetTags: []
+    attackTargets: []
+    impactType:
+    - Flash
+    nextBatterId: 0
+    durationTime: 0.5
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: QiMiaoLvCheng
+    skillPrefab: {fileID: 0}
+    animationName: Tele
     hitFxName: 
     hitFxPrefab: {fileID: 0}
     selectorType: 2
@@ -3726,7 +3796,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 63e4099394d64084fb382078a9d44107, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -4198,9 +4268,10 @@ MonoBehaviour:
   jumpForce: 16
   delay: 1
   CanJump: 1
+  lockDirection: 0
+  Animator: {fileID: 1123649227}
   isParrying: 0
   isInvincible: 0
-  Direction: 1
   isOnGround: 1
 --- !u!114 &1123649226
 MonoBehaviour:
@@ -4215,6 +4286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills: []
+  Animator: {fileID: 1654513193}
 --- !u!95 &1123649227
 Animator:
   serializedVersion: 3
@@ -4438,7 +4510,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8d5cf3ffceeba1f4b9901b64570c4a24, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -4745,7 +4817,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8d5cf3ffceeba1f4b9901b64570c4a24, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -5407,6 +5479,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1654513193 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -3275790484372647858, guid: 4dbbcadc79601df4fa9036168844d019, type: 3}
+  m_PrefabInstance: {fileID: 3491208982525569922}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1683231530
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6011,7 +6088,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8d5cf3ffceeba1f4b9901b64570c4a24, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -6277,7 +6354,7 @@ PlayableDirector:
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: 8d5cf3ffceeba1f4b9901b64570c4a24, type: 2}
   m_InitialState: 1
-  m_WrapMode: 2
+  m_WrapMode: 1
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
   m_SceneBindings:
@@ -6611,6 +6688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills: []
+  Animator: {fileID: 5156083329835851548}
 --- !u!114 &2146372352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6631,9 +6709,10 @@ MonoBehaviour:
   jumpForce: 16
   delay: 1
   CanJump: 1
+  lockDirection: 0
+  Animator: {fileID: 2146372353}
   isParrying: 0
   isInvincible: 0
-  Direction: 1
   isOnGround: 1
 --- !u!95 &2146372353
 Animator:
@@ -6661,6 +6740,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1123649223}
     m_Modifications:
+    - target: {fileID: 1654513194, guid: 4dbbcadc79601df4fa9036168844d019, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 375743547495943678, guid: 4dbbcadc79601df4fa9036168844d019, type: 3}
       propertyPath: m_Name
       value: Effect1
@@ -6671,15 +6754,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4341018510813330178, guid: 4dbbcadc79601df4fa9036168844d019, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.64034
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4341018510813330178, guid: 4dbbcadc79601df4fa9036168844d019, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.819176
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4341018510813330178, guid: 4dbbcadc79601df4fa9036168844d019, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -51.84513
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4341018510813330178, guid: 4dbbcadc79601df4fa9036168844d019, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6802,3 +6885,54 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!212 &5156083329835851549
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5156083329835851547}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 5.12}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0

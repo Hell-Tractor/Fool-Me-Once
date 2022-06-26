@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7359907967345413850}
   - component: {fileID: 6158365911211106412}
   - component: {fileID: 1614880060759776385}
-  - component: {fileID: -1542264487756665001}
+  - component: {fileID: -3790408319767058580}
   m_Layer: 10
   m_Name: Bullet
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: ece80555e1eac6746934ee97d878cf00, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6dfb810eb64743941a2ea0d4e643e6bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae499ab6079c48042ab3f15483545a69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &-1542264487756665001
+--- !u!95 &-3790408319767058580
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ Animator:
   m_GameObject: {fileID: 7359907967345413852}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0ad9c1630b81eb948a63a4cf7feeb3d5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 366550d9758d9fe4d9279e928dbafc4e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

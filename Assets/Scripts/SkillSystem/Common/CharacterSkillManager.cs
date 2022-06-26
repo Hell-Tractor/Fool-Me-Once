@@ -9,12 +9,11 @@ namespace Skill {
     public class CharacterSkillManager : MonoBehaviour {
         public int? LastSkillId = null;
         // 技能列表
-        // [HideInInspector]
+        [HideInInspector]
         public SkillData[] skills;
-        private Animator _animator;
+        public Animator Animator = null;
 
         private void Start() {
-            _animator = this.GetComponent<Animator>();
             foreach (SkillData skill in skills) {
                 this._initSkill(skill);
             }
@@ -63,7 +62,8 @@ namespace Skill {
             deployer.SkillData = data;
             
             // 播放技能动画
-            _animator?.SetTrigger(data.animationName);
+            if (data.animationName != "")
+                Animator?.SetTrigger(data.animationName);
 
             // 执行技能            
             deployer.DeploySkill();

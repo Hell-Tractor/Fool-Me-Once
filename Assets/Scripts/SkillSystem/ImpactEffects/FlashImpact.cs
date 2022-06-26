@@ -9,7 +9,7 @@ namespace Skill
         private float DeltaAlpha = 0.1f;
         public void Execute(SkillDeployer deployer)
         {
-            //н╩жциаож
+            //н╩О©╫О©╫О©╫О©╫О©╫О©╫
             GameObject player = deployer.SkillData.owner;
            
             Transform playerTf = deployer.SkillData.owner.transform;
