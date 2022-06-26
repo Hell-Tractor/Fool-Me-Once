@@ -1224,7 +1224,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 1500, y: 300}
+  m_SizeDelta: {x: 1500, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1383617691
 MonoBehaviour:
@@ -1815,8 +1815,8 @@ MonoBehaviour:
   - {fileID: 1624670996}
   - {fileID: 885750710}
   HintBeforeSelect:
-  - "\u4E00\u53F7\u73A9\u5BB6\u9009\u6280\u80FD"
-  - "\u4E8C\u53F7\u73A9\u5BB6\u9009\u6280\u80FD"
+  - "\u4E00\u53F7\u73A9\u5BB6\u9009\u6280\u80FD\n\u4E8C\u53F7\u73A9\u5BB6\u8BF7\u95ED\u773C\n\n\u957F\u6309E\u952E\u5F00\u59CB\u9009\u62E9"
+  - "\u4E8C\u53F7\u73A9\u5BB6\u9009\u6280\u80FD\n\u4E00\u53F7\u73A9\u5BB6\u8BF7\u95ED\u773C\n\n\u957F\u6309E\u952E\u5F00\u59CB\u9009\u62E9"
   MessageForPlayer:
   - "\u8BF7\u4E00\u53F7\u73A9\u5BB6\u9009\u62E9\u4E09\u4E2A\u6280\u80FD"
   - "\u8BF7\u4E8C\u53F7\u73A9\u5BB6\u9009\u62E9\u4E09\u4E2A\u6280\u80FD"

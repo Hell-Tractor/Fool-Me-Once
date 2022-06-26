@@ -9,6 +9,7 @@ public class SkillSelectUIManager : MonoBehaviour {
     public Text SkillHint;
     public Text Message;
     public GameObject[] Toggles;
+    [Multiline]
     public string[] HintBeforeSelect;
     public string[] MessageForPlayer;
     public GameObject MaskGameObject;
