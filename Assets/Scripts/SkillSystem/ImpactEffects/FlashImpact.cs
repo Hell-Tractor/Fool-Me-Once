@@ -4,40 +4,54 @@ using UnityEngine;
 
 namespace Skill
 {
-    public class InvisiableImpact : IImpactEffect
+    public class FlashImpact : IImpactEffect
     {
-        private float DeltaAlpha=0.1f;
+        private float DeltaAlpha = 0.1f;
         public void Execute(SkillDeployer deployer)
         {
-
+            //Œª÷√…¡œ÷
             GameObject player = deployer.SkillData.owner;
-         //   Debug.Log(1);
-            SpriteRenderer playerrender=player.GetComponent<SpriteRenderer>();
-            SpriteRenderer temp=playerrender;
+           
+            Transform playerTf = deployer.SkillData.owner.transform;
+
+            int player1direction = player.GetComponent<PlayerController>().Direction;
+
+            Vector3 flashVector = new Vector3(player1direction * deployer.SkillData.attackDistance, 0, 0);
+
+            Vector3 tempVector = playerTf.position;
+
+            SpriteRenderer playerrender = player.GetComponent<SpriteRenderer>();
+            SpriteRenderer temp = playerrender;
 
             float r = temp.color.r; float g = temp.color.g; float b = temp.color.b;
-            float alpha=1.0f;
-      
+            float alpha = 1.0f;
+          
             Action task = async () =>
             {
-                for(int i = 0; i < 10; i++)
+            //    Debug.Log(1);
+                for (int i = 0; i < 30; i++)
                 {
                     await Task.Delay(Mathf.RoundToInt(deployer.SkillData.durationTime * 10));
                     alpha -= DeltaAlpha;
                     playerrender.color = new Color(r, g, b, alpha);
+                    playerTf.position = tempVector;
                 }
-                for (int i = 0; i < 80; i++)
+
+                playerTf.position = playerTf.position + flashVector;
+             //   Debug.Log(playerTf.position);
+                for (int i = 0; i < 40; i++)
                 {
                     await Task.Delay(Mathf.RoundToInt(deployer.SkillData.durationTime * 10));
-                   
+
                 }
-                for (int i = 0; i < 10; i++)
+
+                for (int i = 0; i < 30; i++)
                 {
                     await Task.Delay(Mathf.RoundToInt(deployer.SkillData.durationTime * 10));
                     alpha += DeltaAlpha;
                     playerrender.color = new Color(r, g, b, alpha);
+                    
                 }
-
                 deployer.Destroy();
             };
             task.Invoke();

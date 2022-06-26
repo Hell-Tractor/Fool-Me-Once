@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
 
     public bool CanJump = true;
 
+    public bool lockDirection = false;
+
     private Rigidbody2D rb;
 
     private Collider2D coll;
@@ -47,7 +49,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float horizontal = Input.GetAxis("HorizontalPlayer" + PlayerNum);
-        if (!Mathf.Approximately(horizontal, 0f)) {
+        if (!Mathf.Approximately(horizontal, 0f)&&lockDirection==false) {
             Direction = Math.Sign(horizontal);
         }
         if (Input.GetAxis("VerticalPlayer" + PlayerNum) < 0 && Input.GetButtonDown("JumpPlayer" + PlayerNum)&& CanJump)
