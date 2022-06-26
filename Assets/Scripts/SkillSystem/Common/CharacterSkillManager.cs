@@ -11,7 +11,7 @@ namespace Skill {
         // 技能列表
         // [HideInInspector]
         public SkillData[] skills;
-        private Animator _animator;
+        private Animator _animator = null;
 
         private void Start() {
             _animator = this.GetComponent<Animator>();
@@ -63,7 +63,8 @@ namespace Skill {
             deployer.SkillData = data;
             
             // 播放技能动画
-            _animator?.SetTrigger(data.animationName);
+            if (data.animationName != "")
+                _animator?.SetTrigger(data.animationName);
 
             // 执行技能            
             deployer.DeploySkill();
