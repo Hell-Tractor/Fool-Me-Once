@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public float jumpForce = 6f;
 
+    [HideInInspector]
     public float delay = 1.0f;
 
     public bool CanJump = true;
@@ -26,14 +27,15 @@ public class PlayerController : MonoBehaviour
     public bool isParrying = false;
     [HideInInspector]
     public bool isInvincible = false;
-    // [HideInInspector]
+    [HideInInspector]
     public int Direction = 1;
 
     float xVelocity;
 
     int jumpCount;
 
-    private bool isOnGround;
+    [SerializeField]
+    private bool isOnGround = true;
 
     private bool jumpPress;
    
@@ -107,9 +109,9 @@ public class PlayerController : MonoBehaviour
 
     void isOnGroundCheck()
     {
-        isOnGround = coll.Cast(Vector2.down * (Mathf.Sign(jumpForce)), new ContactFilter2D() {
-            layerMask = groundLayer
-        }, new RaycastHit2D[1], 0.05f, true) > 0 && this.rb.velocity.y * jumpForce < 0;
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(groundLayer);
+        isOnGround = coll.Cast(Vector2.down * (Mathf.Sign(jumpForce)), filter, new RaycastHit2D[1], 0.01f, true) > 0 && this.rb.velocity.y * jumpForce < 1e-4;
     }
 
     void Move()
@@ -121,9 +123,11 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (isOnGround)
-        {
+        if (isOnGround) {
             jumpCount = 2;
+        }
+        if (!isOnGround && jumpCount == 2) {
+            jumpCount = 1;
         }
         if (jumpPress && jumpCount > 0)
         {
