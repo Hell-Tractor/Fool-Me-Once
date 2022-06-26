@@ -2255,14 +2255,14 @@ MonoBehaviour:
   - {fileID: 2146372351}
   player1Skills:
   - "\u963F\u4F1F\u597D\u900A"
-  - "\u6362\u4F4D\u601D\u8003"
-  - "\u4E09\u65E5\u8FDE\u73E0"
-  - "\u5929\u6C14\u4E4B\u5B50"
+  - "\u770B\u4E0D\u89C1\u6211"
+  - "\u4F60\u6CA1\u4E8B\u5427"
+  - "\u5947\u5999\u65C5\u7A0B"
   player2Skills:
   - "\u963F\u4F1F\u597D\u900A"
-  - "\u5348\u9910\u65F6\u95F4"
-  - "\u575A\u6BC5\u4E0D\u5012"
-  - "\u4F60\u7684\u540D\u5B57"
+  - "\u770B\u4E0D\u89C1\u6211"
+  - "\u4F60\u6CA1\u4E8B\u5427"
+  - "\u5947\u5999\u65C5\u7A0B"
 --- !u!114 &592767847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,7 +2283,7 @@ MonoBehaviour:
     coolTime: 1
     coolRemain: 0
     value: 0
-    attackDistance: 5
+    attackDistance: 15
     attackRange: 0
     attackTargetTags:
     - Player
@@ -2460,6 +2460,76 @@ MonoBehaviour:
     atkInterval: 0
     owner: {fileID: 0}
     prefabName: JianYiBuDao
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 2
+  - skillId: 8
+    name: "\u770B\u4E0D\u89C1\u6211"
+    description: 
+    isPassive: 0
+    coolTime: 3
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags: []
+    attackTargets: []
+    impactType:
+    - Invisiable
+    nextBatterId: 0
+    durationTime: 3
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: KanBuJianWo
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 2
+  - skillId: 16
+    name: "\u4F60\u6CA1\u4E8B\u5427"
+    description: 
+    isPassive: 0
+    coolTime: 10
+    coolRemain: 0
+    value: 0
+    attackDistance: 0
+    attackRange: 0
+    attackTargetTags:
+    - Player
+    attackTargets: []
+    impactType:
+    - Close
+    nextBatterId: 0
+    durationTime: 7
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: NiMeiShiBa
+    skillPrefab: {fileID: 0}
+    animationName: 
+    hitFxName: 
+    hitFxPrefab: {fileID: 0}
+    selectorType: 1
+  - skillId: 5
+    name: "\u5947\u5999\u65C5\u7A0B"
+    description: 
+    isPassive: 0
+    coolTime: 3
+    coolRemain: 0
+    value: 0
+    attackDistance: 5
+    attackRange: 0
+    attackTargetTags: []
+    attackTargets: []
+    impactType:
+    - Flash
+    nextBatterId: 0
+    durationTime: 0.5
+    atkInterval: 0
+    owner: {fileID: 0}
+    prefabName: QiMiaoLvCheng
     skillPrefab: {fileID: 0}
     animationName: 
     hitFxName: 
@@ -4196,9 +4266,10 @@ MonoBehaviour:
   jumpForce: 16
   delay: 1
   CanJump: 1
+  lockDirection: 0
   isParrying: 0
   isInvincible: 0
-  Direction: 1
+  Direction: -1
   isOnGround: 1
 --- !u!114 &1123649226
 MonoBehaviour:
@@ -6608,7 +6679,8 @@ MonoBehaviour:
   jumpForce: 16
   delay: 1
   CanJump: 1
+  lockDirection: 0
   isParrying: 0
   isInvincible: 0
-  Direction: 1
+  Direction: -1
   isOnGround: 1
