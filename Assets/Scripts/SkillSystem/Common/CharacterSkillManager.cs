@@ -20,6 +20,10 @@ namespace Skill {
 
         private void _initSkill(SkillData data) {
             data.skillPrefab = Resources.Load<GameObject>("Skill/" + data.prefabName);
+            if (data.skillPrefab == null) {
+                Debug.LogError("Skill prefab not found: " + data.prefabName);
+                return;
+            }
             data.owner = this.gameObject;
         }
 
@@ -45,6 +49,10 @@ namespace Skill {
         /// </summary>
         /// <param name="data">技能数据</param>
         public void GenerateSkill(SkillData data) {
+            if (data == null) {
+                Debug.LogError("Cannot generate null skill");
+                return;
+            }
             // 创建技能
             GameObject skillGO = Instantiate(data.skillPrefab, this.transform.position, this.transform.rotation);            
 

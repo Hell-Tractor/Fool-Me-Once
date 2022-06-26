@@ -4064,8 +4064,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!70 &1123649221
-CapsuleCollider2D:
+--- !u!61 &1123649221
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4077,9 +4077,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0063574314, y: -0.7242632}
-  m_Size: {x: 2.1828895, y: 3.338976}
-  m_Direction: 0
+  m_Offset: {x: 0.023637772, y: -0.30728912}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 5.12}
+    newSize: {x: 5.12, y: 5.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1416664, y: 4.12722}
+  m_EdgeRadius: 0
 --- !u!212 &1123649222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5025,7 +5035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3239286272281640160, guid: 0cc7896fab618b746ae754416ad5bac7, type: 3}
       propertyPath: m_Layer
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3239286272281640160, guid: 0cc7896fab618b746ae754416ad5bac7, type: 3}
       propertyPath: m_TagString
@@ -6461,9 +6471,9 @@ GameObject:
   - component: {fileID: 2146372349}
   - component: {fileID: 2146372348}
   - component: {fileID: 2146372347}
+  - component: {fileID: 2146372350}
   - component: {fileID: 2146372352}
   - component: {fileID: 2146372351}
-  - component: {fileID: 2146372350}
   m_Layer: 7
   m_Name: Player2
   m_TagString: Player

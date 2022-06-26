@@ -10,6 +10,7 @@ namespace Skill {
             Action task = async () => {
                 await Task.Delay(Mathf.RoundToInt(deployer.SkillData.durationTime * 1000));
                 _reverse(deployer);
+                deployer.Destroy();
             };
             task.Invoke();
         }
