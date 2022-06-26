@@ -11,6 +11,7 @@ public class SkillSelectUIManager : MonoBehaviour {
     public GameObject[] Toggles;
     [Multiline]
     public string[] HintBeforeSelect;
+    [Multiline]
     public string[] MessageForPlayer;
     public GameObject MaskGameObject;
     public float MaskHideDuration;

@@ -681,8 +681,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 506}
-  m_SizeDelta: {x: 1200, y: 120}
+  m_AnchoredPosition: {x: 0, y: 376}
+  m_SizeDelta: {x: 1200, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104619479
 MonoBehaviour:
@@ -764,7 +764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 291}
+  m_AnchoredPosition: {x: 0, y: 326}
   m_SizeDelta: {x: 1050, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132461809
@@ -825,7 +825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
+  m_AnchoredPosition: {x: 0, y: -77}
   m_SizeDelta: {x: 1300, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349242664
@@ -1499,8 +1499,8 @@ MonoBehaviour:
   - "\u4E00\u53F7\u73A9\u5BB6\u9009\u6280\u80FD\n\u4E8C\u53F7\u73A9\u5BB6\u8BF7\u95ED\u773C\n\n\u957F\u6309E\u952E\u5F00\u59CB\u9009\u62E9"
   - "\u4E8C\u53F7\u73A9\u5BB6\u9009\u6280\u80FD\n\u4E00\u53F7\u73A9\u5BB6\u8BF7\u95ED\u773C\n\n\u957F\u6309E\u952E\u5F00\u59CB\u9009\u62E9"
   MessageForPlayer:
-  - "\u8BF7\u4E00\u53F7\u73A9\u5BB6\u9009\u62E9\u4E09\u4E2A\u6280\u80FD"
-  - "\u8BF7\u4E8C\u53F7\u73A9\u5BB6\u9009\u62E9\u4E09\u4E2A\u6280\u80FD"
+  - "\u8BF7\u9009\u62E9\u4E09\u4E2A\u6280\u80FD\u5E76\u8BB0\u4F4F"
+  - "\u8BF7\u9009\u62E9\u4E09\u4E2A\u6280\u80FD\u5E76\u8BB0\u4F4F"
   MaskGameObject: {fileID: 1530760042}
   MaskHideDuration: 1.5
   ConfirmButton: {fileID: 1826047782}
