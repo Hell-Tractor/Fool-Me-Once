@@ -2,6 +2,18 @@
 
 Unity版本: 2020.3.30f1c1
 
+## 声明
+
+本项目的贡献者仅包含（排名不分先后）：
+- 美术&策划：[@KiraMingshao](https://github.com/KiraMingshao)
+- 美术：[@Relyna](https://github.com/Relyna)
+- 程序：[@PanJYyyyy](https://github.com/PanJYyyyy)
+- 程序：[@Hell-Tractor](https://github.com/Hell-Tractor)
+
+__某位陈Y同学并不在此列表中，从未对本项目做出任何贡献，也从未获得任何关于本项目的授权。__
+
+如果对此有任何疑问或想要了解的，请发送email至[isyiming.chen@gmail.com](mailto:isyiming.chen@gmail.com)。
+
 ## 目录
 
 - [目录](#目录)
